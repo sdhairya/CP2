@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordConfirmationFragment"
-        android:name="com.dhairya.societymanagementapplication.authActivity.authfragments.ui.forgotpasswordconfirmation.forgotPasswordConfirmationFragment"
+        android:name="com.dhairya.societymanagementapplication.authActivity.authfragments.ui.forgotpasswordconfirmation.PasswordConfirmFragment"
         android:label="fragment_forgot_password_confrimation"
         tools:layout="@layout/fragment_forgot_password_confrimation" >
         <action
