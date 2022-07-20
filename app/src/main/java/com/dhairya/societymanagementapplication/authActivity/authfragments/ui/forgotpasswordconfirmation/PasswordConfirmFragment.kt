@@ -22,7 +22,7 @@ class PasswordConfirmFragment : Fragment(R.layout.fragment_forgot_password_confr
         binding.apply {
 
             btnBackTologin.setOnClickListener {
-                findNavController().navigate(forgotPasswordConfirmationFragmentDirections.actionForgotPasswordConfirmationFragmentToLoginFragment())
+                findNavController().navigate(PasswordConfirmFragmentDirections.actionForgotPasswordConfirmationFragmentToLoginFragment())
 
             }
 
