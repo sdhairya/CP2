@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboardActivity.addTransaction.AddTransactionFragment">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/ic_baseline_arrow_back_black"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txt_add_transaction"/>
+
+    <TextView
+        android:id="@+id/txt_add_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Transaction"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_selectDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.8"
+        android:paddingVertical="15dp"
+        android:drawableRight="@drawable/calendar"
+        android:backgroundTint="#FFFFFF"
+        android:hint="Select date"
+        android:textSize="15dp"
+        android:textColorHint="#858181"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        app:strokeColor="#858181"
+        app:strokeWidth="1dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_add_transaction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txt_particulars"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_particulars"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_selectDate"
+        app:layout_constraintWidth_percent="0.8">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/particulars_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_sharp_notice"
+            android:drawableTint="#445BC3"
+            android:hint="Enter Particulars    " />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_amount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_particulars"
+        app:layout_constraintWidth_percent="0.8">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/amountEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:drawableRight="@drawable/ic_baseline_attach_money_24"
+            android:drawableTint="#445BC3"
+            android:hint="Enter Amount    " />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_add_Transaction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Add Transaction"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_corner"
+        app:layout_constraintTop_toBottomOf="@id/txt_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

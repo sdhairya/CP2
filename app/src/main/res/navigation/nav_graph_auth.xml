@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_auth"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.dhairya.societymanagementapplication.authActivity.authfragments.ui.login.loginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_createProfileFragment"
+            app:destination="@id/createProfileFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_changePasswordFragment2"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.dhairya.societymanagementapplication.authActivity.authfragments.ui.forgotpassword.forgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_forgotPasswordConfirmationFragment"
+            app:destination="@id/forgotPasswordConfirmationFragment" />
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordConfirmationFragment"
+        android:name="com.dhairya.societymanagementapplication.authActivity.authfragments.ui.forgotpasswordconfirmation.forgotPasswordConfirmationFragment"
+        android:label="fragment_forgot_password_confrimation"
+        tools:layout="@layout/fragment_forgot_password_confrimation" >
+        <action
+            android:id="@+id/action_forgotPasswordConfirmationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.dhairya.societymanagementapplication.authActivity.authfragments.ui.changePassword.changePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" >
+        <action
+            android:id="@+id/action_changePasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_changePasswordFragment_to_createProfileFragment"
+            app:destination="@id/createProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createProfileFragment"
+        android:name="com.dhairya.societymanagementapplication.authActivity.authfragments.ui.createProfile.createProfileFragment"
+        android:label="fragment_create_profile"
+        tools:layout="@layout/fragment_create_profile" />
+</navigation>

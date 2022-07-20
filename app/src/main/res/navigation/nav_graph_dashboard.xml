@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_dashboard"
+    app:startDestination="@id/dashBoardFragment">
+
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.dashBoard.dashBoardFragment"
+        android:label="fragment_dash_board"
+        tools:layout="@layout/fragment_dash_board" >
+        <action
+            android:id="@+id/action_dashBoardFragment_to_expenseSheetFragment"
+            app:destination="@id/expenseSheetFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_residentListFragment"
+            app:destination="@id/residentListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_maintenanceInvoiceFragment"
+            app:destination="@id/maintenanceInvoiceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_addMemberFragment"
+            app:destination="@id/addMemberFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_addTransactionFragment"
+            app:destination="@id/addTransactionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_noticeFragment"
+            app:destination="@id/noticeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_fileComplain"
+            app:destination="@id/fileComplain"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_complainsListFragment"
+            app:destination="@id/complainsListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_noticeListFragment"
+            app:destination="@id/notices"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_myComplainsFragment"
+            app:destination="@id/myComplainsFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_communicationFragment"
+            app:destination="@id/communicationFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_rulesFragment"
+            app:destination="@id/rulesFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expenseSheetFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.expenseSheet.expenseSheetFragment"
+        android:label="fragment_expense_sheet"
+        tools:layout="@layout/fragment_expense_sheet" >
+        <action
+            android:id="@+id/action_expenseSheetFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMemberFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.addMember.addMemberFragment"
+        android:label="fragment_add_member"
+        tools:layout="@layout/fragment_add_member" >
+        <action
+            android:id="@+id/action_addMemberFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/maintenanceInvoiceFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.maintenanceInvoice.maintenanceInvoiceFragment"
+        android:label="fragment_maintenance_invoice"
+        tools:layout="@layout/fragment_maintenance_invoice" >
+        <action
+            android:id="@+id/action_maintenanceInvoiceFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/residentListFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.residentList.residentListFragment"
+        android:label="fragment_resident_list"
+        tools:layout="@layout/fragment_resident_list" >
+        <action
+            android:id="@+id/action_residentListFragment_to_residentDetailsDialogFragment"
+            app:destination="@id/residentDetailsDialogFragment" />
+        <action
+            android:id="@+id/action_residentListFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/residentDetailsDialogFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.residentDetailsDialog.residentDetailsDialogFragment"
+        android:label="fragment_resident_details_dialog"
+        tools:layout="@layout/fragment_resident_details_dialog" />
+    <fragment
+        android:id="@+id/addTransactionFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.addTransaction.AddTransactionFragment"
+        android:label="fragment_add_transaction"
+        tools:layout="@layout/fragment_add_transaction" >
+        <action
+            android:id="@+id/action_addTransactionFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.profile.profileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.editProfile.editProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noticeFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.notice.NoticeFragment"
+        android:label="fragment_notice"
+        tools:layout="@layout/fragment_notice" >
+        <action
+            android:id="@+id/action_noticeFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/fileComplain"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.fieComplain.fileComplainFragment"
+        android:label="fragment_file_complain"
+        tools:layout="@layout/fragment_file_complain" >
+        <action
+            android:id="@+id/action_fileComplain_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/complainsListFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.complainsList.complainsListFragment"
+        android:label="fragment_complains_list"
+        tools:layout="@layout/fragment_complains_list" >
+        <action
+            android:id="@+id/action_complainsListFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_complainsListFragment_to_complainFragment"
+            app:destination="@id/complainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/complainFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.complain.ComplainFragment"
+        android:label="fragment_complain"
+        tools:layout="@layout/fragment_complain" >
+        <action
+            android:id="@+id/action_complainFragment_to_complainsListFragment"
+            app:destination="@id/complainsListFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="complain"
+            app:argType="com.dhairya.societymanagementapplication.data.complainData" />
+    </fragment>
+    <fragment
+        android:id="@+id/notices"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.noticeList.noticeListFragment"
+        android:label="fragment_notice_list"
+        tools:layout="@layout/fragment_notice_list" >
+        <action
+            android:id="@+id/action_noticeListFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/myComplainsFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.myComplains.myComplainsFragment"
+        android:label="fragment_my_complains"
+        tools:layout="@layout/fragment_my_complains" >
+        <action
+            android:id="@+id/action_myComplainsFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+        <action
+            android:id="@+id/action_myComplainsFragment_to_myComplainDisplayFragment"
+            app:destination="@id/myComplainDisplayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myComplainDisplayFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.myComplainDisplay.myComplainDisplayFragment"
+        android:label="fragment_my_complain_display"
+        tools:layout="@layout/fragment_my_complain_display" >
+        <action
+            android:id="@+id/action_myComplainDisplayFragment_to_myComplainsFragment"
+            app:destination="@id/myComplainsFragment" />
+        <argument
+            android:name="complain"
+            app:argType="com.dhairya.societymanagementapplication.data.complainData" />
+    </fragment>
+    <fragment
+        android:id="@+id/communicationFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.communication.communicationFragment"
+        android:label="fragment_communication"
+        tools:layout="@layout/fragment_communication" >
+        <action
+            android:id="@+id/action_communicationFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.rules.rulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" >
+        <action
+            android:id="@+id/action_rulesFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+        <action
+            android:id="@+id/action_rulesFragment_to_addRuleFragment"
+            app:destination="@id/addRuleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRuleFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.addRule.addRuleFragment"
+        android:label="fragment_add_rule"
+        tools:layout="@layout/fragment_add_rule" >
+        <action
+            android:id="@+id/action_addRuleFragment_to_rulesFragment"
+            app:destination="@id/rulesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.dhairya.societymanagementapplication.dashboardActivity.about.aboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+</navigation>
